@@ -12,7 +12,6 @@ const StyledIntro = styled.section`
   background-image: url("/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: -100px;
 `
 const Content = styled.div`
   display: flex;
@@ -44,7 +43,7 @@ const Intro = () => {
               UI/UX DESIGNER - FRONTEND DEVELOPER
             </Heading>
             <Text color='white'>
-              Resido en Santiago de Chile y como un híbrido raro de diseñador y desarrollador, entiendo que una interfaz
+              Resido en Santiago de Chile y como un híbrido raro de diseñador/desarrollador, entiendo que una interfaz
               de usuario debe verse bien y funcionar aún mejor. Soy un apasionado y conocedor de los aspectos técnicos y
               visuales que hacen que la experiencia de una plataforma web sea mas audaz e intuitiva.
             </Text>
