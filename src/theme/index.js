@@ -12,7 +12,7 @@ const style = {
   },
   fontSizes: {
     mini: 12,
-    small: 16,
+    small: 18,
     default: 24,
     medium: 36,
     big: 42,
@@ -22,17 +22,24 @@ const style = {
   fonts: {
     default: "'TT-Norms', sans-serif"
   },
+  lineHeights: {
+    default: 1,
+    medium: 1.5,
+    large: 2
+  },
   borderWidths: {
     thin: 2,
     thick: 4
   },
   space: {
-    mini: 5,
-    default: 10,
-    small: 15,
-    medium: 20,
-    big: 25,
-    large: 30
+    mini: 4,
+    default: 8,
+    small: 16,
+    medium: 24,
+    big: 32,
+    large: 40,
+    gigant: 48,
+    colossus: 56
   }
 }
 
