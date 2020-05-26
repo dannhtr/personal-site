@@ -5,8 +5,8 @@ const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-left: ${({ theme }) => theme.space.default}px;
-  padding-right: ${({ theme }) => theme.space.default}px;
+  padding-left: ${theme.space.big}px;
+  padding-right: ${theme.space.big}px;
 
   ${theme.mediaQueries.default} {
     max-width: none;
