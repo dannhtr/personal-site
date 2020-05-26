@@ -8,31 +8,31 @@ const Container = styled.div`
   padding-left: ${({ theme }) => theme.space.default}px;
   padding-right: ${({ theme }) => theme.space.default}px;
 
-  ${theme.mediaQueries.xsmall} {
+  ${theme.mediaQueries.default} {
     max-width: none;
   }
 
-  ${theme.mediaQueries.small} {
+  ${theme.mediaQueries.xs} {
     max-width: 540px;
   }
 
-  ${theme.mediaQueries.medium} {
+  ${theme.mediaQueries.sm} {
     max-width: 720px;
   }
 
-  ${theme.mediaQueries.large} {
+  ${theme.mediaQueries.md} {
     max-width: 960px;
   }
 
-  ${theme.mediaQueries.xlarge} {
+  ${theme.mediaQueries.lg} {
     max-width: 1140px;
   }
 
-  ${theme.mediaQueries.xxlarge} {
+  ${theme.mediaQueries.xl} {
     max-width: 1280px;
   }
 
-  ${theme.mediaQueries.xxxlarge} {
+  ${theme.mediaQueries.xxl} {
     max-width: 1440px;
   }
 `

@@ -27,7 +27,7 @@ const Intro = () => {
       <Container>
         <Content>
           <Item>
-            <Heading level={1} fontSize='gigant' color='white' lineHeight='default' mb='24px'>
+            <Heading level={1} fontSize={{ _: "xlarge", lg: "gigant" }} color='white' lineHeight='default' mb='24px'>
               Jelou! soy...
               <br /> Daniel Camargo
             </Heading>
