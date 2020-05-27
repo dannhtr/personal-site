@@ -8,7 +8,7 @@ const StyledSocial = styled.div`
   ${space}
 
   a {
-    margin-right: ${theme.space.small}px;
+    margin-right: ${theme.space.medium}px;
   }
 `
 

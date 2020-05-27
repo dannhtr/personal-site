@@ -3,7 +3,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components"
 import theme from "./theme/index"
 import "./fonts/fonts.css"
 
-import { Intro, SkillsTools } from "./sections"
+import { Intro, SkillsTools, WorkExperience, Picture } from "./sections"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -38,6 +38,8 @@ const App = () => {
       <GlobalStyle />
       <Intro />
       <SkillsTools />
+      <WorkExperience />
+      <Picture />
     </ThemeProvider>
   )
 }

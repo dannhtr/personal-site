@@ -6,12 +6,8 @@ import { Container, Heading, Text } from "../components"
 
 const StyledSkillsTools = styled.section`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
-  padding-bottom: ${({ theme }) => theme.space.colossus * 4}px;
+  padding-bottom: ${({ theme }) => theme.space.colossus * 2}px;
   background-color: ${({ theme }) => theme.colors.secondary};
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    padding-top: ${({ theme }) => theme.space.colossus * 4}px;
-  }
 `
 
 const SkillsTools = () => {
