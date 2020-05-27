@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../theme"
 
-import { Heading, Text, Container } from "../components"
+import { Heading, Text, Container, Nav } from "../components"
 
 const StyledIntro = styled.section`
   height: auto;
@@ -50,6 +50,7 @@ const Intro = () => {
   return (
     <StyledIntro>
       <Container>
+        <Nav />
         <Content>
           <Item>
             <Heading level={1} fontSize={{ _: "xlarge", lg: "gigant" }} color='white' lineHeight='default' mb='24px'>
