@@ -6606,11 +6606,6 @@ lodash._reinterpolate@^3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
 
-lodash.isinteger@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/lodash.isinteger/-/lodash.isinteger-4.0.4.tgz#619c0af3d03f8b04c31f5882840b77b11cd68343"
-  integrity sha1-YZwK89A/iwTDH1iChAt3sRzWg0M=
-
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -8741,6 +8736,13 @@ react-error-overlay@^6.0.7:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
 
+react-grid-system@^6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-6.4.2.tgz#3caea1feb3daa10306fb2a6ff3e3ff83ba352676"
+  integrity sha512-zQxczLIAUyFfXJOySQlQEptwZj65hxyoEvS+siTupFW76a3AKUhqrhMJ90xKDcSCF9jb9D71zjoPw13Xe1+EKA==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -8805,13 +8807,6 @@ react-scripts@3.4.1:
     workbox-webpack-plugin "4.3.1"
   optionalDependencies:
     fsevents "2.1.2"
-
-react-styled-flexboxgrid@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-3.2.1.tgz#78b87c9dcf6e4f146e4a305668e894be8fa4f679"
-  integrity sha512-4dRs4CiVHjnyOQssm2Ge7ERCmbWi2rI/rsQtp3A8A5sli9EAKlVErQ6XujMM5Z9uxXN4O30zb2YDL3ufmD5Hiw==
-  dependencies:
-    lodash.isinteger "^4.0.4"
 
 react@^16.13.1:
   version "16.13.1"
