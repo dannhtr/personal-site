@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../theme"
 
-import { Heading, Text, Container, Nav } from "../components"
+import { Heading, Text, Container, Nav, Social } from "../components"
 
 const StyledIntro = styled.section`
   height: auto;
@@ -74,6 +74,7 @@ const Intro = () => {
               de usuario debe verse bien y funcionar aún mejor. Soy un apasionado y conocedor de los aspectos técnicos y
               visuales que hacen que la experiencia de una plataforma web sea mas audaz e intuitiva.
             </Text>
+            <Social marginTop={{ _: `${theme.space.big}px`, sm: `${theme.space.colossus * 2}px` }} />
           </Item>
         </Content>
       </Container>
