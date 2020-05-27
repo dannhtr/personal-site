@@ -1,4 +1,4 @@
-const colors = { primary: "#22FF95", secondary: "#202020", bg: "#FAFAFA", white: "#fff" }
+const colors = { primary: "#00FF85", secondary: "#202020", bg: "#FAFAFA", white: "#fff" }
 const radii = { small: 4, medium: 8, large: 12 }
 const fontSizes = { mini: 12, small: 18, default: 24, medium: 36, large: 42, xlarge: 64, gigant: 86 }
 const fonts = { default: "'TT-Norms', sans-serif" }

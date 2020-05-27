@@ -4,7 +4,6 @@ import { space, color, typography, layout } from "styled-system"
 
 const StyledHeading = styled.h1`
   margin: 0;
-  transition: all ease 1s;
   ${space};
   ${color};
   ${typography}

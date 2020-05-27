@@ -5,19 +5,29 @@ import theme from "../theme"
 import { Heading, Text, Container } from "../components"
 
 const StyledIntro = styled.section`
-  height: 100%;
+  height: auto;
   background-color: ${theme.colors.secondary};
 
   background-image: url("/hero-mobile.png");
-  background-size: 240%;
-  background-position: -240px 200px;
+  background-size: 120%;
+  background-position: left 420px;
   background-repeat: no-repeat;
   padding-top: 190px;
+  padding-bottom: 100px;
+
+  ${theme.mediaQueries.xs} {
+    background-size: 120%;
+    background-position: left 300px;
+    background-repeat: no-repeat;
+  }
 
   ${theme.mediaQueries.sm} {
+    height: 100%;
     background-image: url("/hero.png");
     background-size: cover;
     background-position: center;
+    padding-top: unset;
+    padding-bottom: unset;
 
     display: flex;
     justify-content: start;
@@ -58,8 +68,8 @@ const Intro = () => {
             >
               UI/UX DESIGNER - FRONTEND DEV
             </Heading>
-            <Text color='white' maxWidth={{ lg: "500px" }} marginTop={{ _: "300px", sm: "auto" }}>
-              Resido en Santiago de Chile y como un híbrido raro de diseñador/desarrollador, entiendo que una interfaz
+            <Text color='white' maxWidth={{ lg: "500px" }} marginTop={{ _: "220px", sm: "auto" }}>
+              Resido en Santiago de Chile y como un híbrido raro de diseñador / desarrollador, entiendo que una interfaz
               de usuario debe verse bien y funcionar aún mejor. Soy un apasionado y conocedor de los aspectos técnicos y
               visuales que hacen que la experiencia de una plataforma web sea mas audaz e intuitiva.
             </Text>
