@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../theme"
 
-import { Heading, Text, Container, Nav, Social } from "../components"
+import { Heading, Text, Container, Nav, Social, Orb } from "../components"
 
 const StyledIntro = styled.section`
   height: auto;
@@ -10,7 +10,7 @@ const StyledIntro = styled.section`
 
   background-image: url("/hero-mobile.png");
   background-size: 120%;
-  background-position: left 420px;
+  background-position: left 480px;
   background-repeat: no-repeat;
   padding-top: 190px;
   padding-bottom: 100px;
@@ -49,6 +49,7 @@ const Item = styled.div`
 const Intro = () => {
   return (
     <StyledIntro>
+      <Orb />
       <Container>
         <Nav />
         <Content>
@@ -69,7 +70,11 @@ const Intro = () => {
             >
               UI/UX DESIGNER - FRONTEND DEV
             </Heading>
-            <Text color='white' maxWidth={{ lg: "500px" }} marginTop={{ _: "220px", sm: "auto" }}>
+            <Text
+              color='white'
+              maxWidth={{ lg: "500px" }}
+              marginTop={{ _: `${theme.space.colossus * 6}px`, sm: "auto" }}
+            >
               Resido en Santiago de Chile y como un híbrido raro de diseñador / desarrollador, entiendo que una interfaz
               de usuario debe verse bien y funcionar aún mejor. Soy un apasionado y conocedor de los aspectos técnicos y
               visuales que hacen que la experiencia de una plataforma web sea mas audaz e intuitiva.
