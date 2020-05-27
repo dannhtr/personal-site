@@ -54,7 +54,15 @@ const Intro = () => {
         <Nav />
         <Content>
           <Item>
-            <Heading level={1} fontSize={{ _: "xlarge", lg: "gigant" }} color='white' lineHeight='default' mb='24px'>
+            <Heading
+              level={1}
+              fontSize={{ _: "xlarge", lg: "gigant" }}
+              color='white'
+              lineHeight='default'
+              mb='24px'
+              position='relative'
+              zIndex='2'
+            >
               Jelou! soy...
               <br /> Daniel Camargo
             </Heading>
@@ -72,6 +80,7 @@ const Intro = () => {
             </Heading>
             <Text
               color='white'
+              position='relative'
               maxWidth={{ lg: "500px" }}
               marginTop={{ _: `${theme.space.colossus * 6}px`, sm: "auto" }}
             >

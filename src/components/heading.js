@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { space, color, typography, layout } from "styled-system"
+import { space, color, typography, layout, position } from "styled-system"
 
 const StyledHeading = styled.h1`
   margin: 0;
@@ -8,6 +8,7 @@ const StyledHeading = styled.h1`
   ${color};
   ${typography}
   ${layout}
+  ${position}
 `
 
 const Heading = ({ level, ...rest }) => {

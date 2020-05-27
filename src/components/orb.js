@@ -6,7 +6,7 @@ import theme from "../theme"
 
 const StyledOrb = styled(motion.div)`
   position: relative;
-  z-index: 1000;
+  z-index: 1;
   width: 80px;
   height: 80px;
   background: rgb(255, 255, 255);
@@ -36,6 +36,7 @@ const WrapperOrb = styled.div`
   justify-content: flex-end;
 
   overflow-x: hidden;
+  pointer-events: none;
 `
 
 const Orb = () => {
