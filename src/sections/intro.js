@@ -8,30 +8,48 @@ const StyledIntro = styled.section`
   height: auto;
   background-color: ${theme.colors.secondary};
 
-  background-image: url("/hero-mobile.png");
-  background-size: 120%;
-  background-position: left 480px;
+  background-image: url("/keyboard.png");
+  background-size: 400px;
+  background-position: left 50%;
   background-repeat: no-repeat;
   padding-top: 190px;
   padding-bottom: 100px;
 
   ${theme.mediaQueries.xs} {
-    background-size: 120%;
-    background-position: left 300px;
+    background-size: 600px;
+    background-position: center 55%;
     background-repeat: no-repeat;
   }
 
   ${theme.mediaQueries.sm} {
     height: 100%;
-    background-image: url("/hero.png");
-    background-size: cover;
-    background-position: center;
+    background-image: url("/keyboard.png");
+    background-size: 800px;
+    background-position: bottom right;
     padding-top: unset;
     padding-bottom: unset;
 
     display: flex;
     justify-content: start;
     align-items: center;
+  }
+
+  ${theme.mediaQueries.md} {
+    background-size: 800px;
+    background-position-y: 100%;
+  }
+
+  ${theme.mediaQueries.lg} {
+    background-size: 900px;
+  }
+
+  ${theme.mediaQueries.xl} {
+    background-size: 1009px;
+    background-position-x: 80%;
+  }
+
+  ${theme.mediaQueries.xxl} {
+    background-position-x: 80%;
   }
 `
 const Content = styled.div`
@@ -41,15 +59,15 @@ const Content = styled.div`
 const Item = styled.div`
   flex: 0 1 100%;
 
-  ${theme.mediaQueries.sm} {
+  /* ${theme.mediaQueries.sm} {
     flex: 0 1 51%;
-  }
+  } */
 `
 
 const Intro = () => {
   return (
     <StyledIntro>
-      <Orb />
+      {/* <Orb /> */}
       <Container>
         <Nav />
         <Content>
@@ -89,6 +107,7 @@ const Intro = () => {
               visuales que hacen que la experiencia de una plataforma web sea mas audaz e intuitiva.
             </Text>
             <Social marginTop={{ _: `${theme.space.big}px`, sm: `${theme.space.colossus * 2}px` }} />
+            {/* <img src='/keyboard.png' alt='dann' width='100%' /> */}
           </Item>
         </Content>
       </Container>
