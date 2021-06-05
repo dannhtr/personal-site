@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
+import { motion, useViewportScroll } from "framer-motion"
+
 import theme from "../theme"
 
-import { Heading, Text, Container, Nav, Social, Orb } from "../components"
+import { Heading, Text, Container, Nav, Social } from "../components"
 
 const StyledIntro = styled.section`
   height: auto;
@@ -52,38 +54,43 @@ const StyledIntro = styled.section`
     background-position-x: 80%;
   }
 `
+
 const Content = styled.div`
   display: flex;
 `
 
-const Item = styled.div`
+const Item = styled(motion.div)`
   flex: 0 1 100%;
-
-  /* ${theme.mediaQueries.sm} {
-    flex: 0 1 51%;
-  } */
 `
 
 const Intro = () => {
+  const { scrollY } = useViewportScroll()
+  const ref = useRef()
+
+  useEffect(() => {
+    scrollY.onChange((e) => console.log(e))
+  }, [])
+
   return (
     <StyledIntro>
-      {/* <Orb /> */}
       <Container>
         <Nav />
         <Content>
-          <Item>
-            <Heading
-              level={1}
-              fontSize={{ _: "xlarge", lg: "gigant" }}
-              color='white'
-              lineHeight='default'
-              mb='24px'
-              position='relative'
-              zIndex='2'
-            >
-              Jelou! soy...
-              <br /> Daniel Camargo
-            </Heading>
+          <Item ref={ref}>
+            <motion.div>
+              <Heading
+                level={1}
+                fontSize={{ _: "xlarge", lg: "gigant" }}
+                color='white'
+                lineHeight='default'
+                mb='24px'
+                position='relative'
+                zIndex='2'
+              >
+                Jelou! soy...
+                <br /> Daniel Camargo
+              </Heading>
+            </motion.div>
             <Heading
               level={2}
               fontSize='small'
@@ -107,7 +114,6 @@ const Intro = () => {
               visuales que hacen que la experiencia de una plataforma web sea mas audaz e intuitiva.
             </Text>
             <Social marginTop={{ _: `${theme.space.big}px`, sm: `${theme.space.colossus * 2}px` }} />
-            {/* <img src='/keyboard.png' alt='dann' width='100%' /> */}
           </Item>
         </Content>
       </Container>

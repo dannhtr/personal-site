@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { space, color, typography, layout, position } from "styled-system"
+import { motion } from "framer-motion"
 
-const StyledHeading = styled.h1`
+const StyledHeading = styled(motion.h1)`
   margin: 0;
   ${space};
   ${color};

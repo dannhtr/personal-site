@@ -7,18 +7,19 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "framer-motion": "^1.11.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-grid-system": "^6.4.2",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "next start",
+    "build": "next build",
+    "test": "next test",
+    "dev": "next dev"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2"
   }
 }
