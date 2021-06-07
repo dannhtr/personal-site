@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@prismicio/client": "^5.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/styled-system": "^5.1.11",
     "framer-motion": "^1.11.0",
     "next": "^10.2.3",
+    "prismic-reactjs": "^1.3.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-grid-system": "^6.4.2",
@@ -36,7 +39,18 @@
       "last 1 safari version"
     ]
   },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "devDependencies": {
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.28.0",
     "typescript": "^4.3.2"
   }
 }

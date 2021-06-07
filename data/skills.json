@@ -1,0 +1,12 @@
+{
+  "frontend": {
+    "title": "Frontend Development",
+    "skills": "HTML/CSS, Javascript, Typescript, React JS, Next JS, Styled-Components, CSS Animations, Framer Motion, Rest Api, Node Js",
+    "tools": "Visual Studio Code, Postman, Github, Slack, Hyper."
+  },
+  "design": {
+    "title": "UI/UX Design",
+    "skills": "Landing pages, Wireframes, Prototipos, App Design, Design Systems, Atomic Design, Branding, Icon Design",
+    "tools": "Figma, Invision, Zeplin, Framer, Photoshop, Illustrator."
+  }
+}

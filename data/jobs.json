@@ -1,0 +1,76 @@
+{
+  "jobs": [
+    {
+      "id": 8,
+      "position": "Frontend Engineer",
+      "company": "Ria Money Transfer",
+      "location": "Santiago. Chile",
+      "from": "2021",
+      "to": "Presente",
+      "description": "Encargado del diseño de la interfaces de usuario y desarrollo front-end en React JS de las diferentes plataformas del producto en Haip."
+    },
+    {
+      "id": 7,
+      "position": "Frontend Engineer",
+      "company": "Cornershop",
+      "location": "Santiago. Chile",
+      "from": "2020",
+      "to": "2021",
+      "description": "Encargado del diseño de la interfaces de usuario y desarrollo front-end en React JS de las diferentes plataformas del producto en Haip."
+    },
+    {
+      "id": 6,
+      "position": "UI/UX Designer / Frontend Dev",
+      "company": "Haip",
+      "location": "Santiago. Chile",
+      "from": "2018",
+      "to": "2020",
+      "description": "Encargado del diseño de la interfaces de usuario y desarrollo front-end en React JS de las diferentes plataformas del producto en Haip."
+    },
+    {
+      "id": 5,
+      "position": "UI/UX Designer / Frontend Dev",
+      "company": "Eniax",
+      "location": "Santiago. Chile",
+      "from": "2017",
+      "to": "2018",
+      "description": "Labores diferentes tanto en diseño como en la creación de flujos de navegación para la agenda médica online y plataforma admin interna."
+    },
+    {
+      "id": 4,
+      "position": "UI Designer",
+      "company": "2Brains (BCI)",
+      "location": "Santiago. Chile",
+      "from": "2017",
+      "to": "",
+      "description": "Llevé a cabo tareas de creación de prototipos navegables en HTML/CSS/JS para el testeo de flujos de clientes empresas BCI en la solicitud de créditos."
+    },
+    {
+      "id": 3,
+      "position": "Web & Graphic Designer",
+      "company": "Wemake",
+      "location": "Santiago. Chile",
+      "from": "2017",
+      "to": "2018",
+      "description": "Creación de diseños webs para diferentes clientes de la agencia, además de implementación de estos usando CMS Wordpress."
+    },
+    {
+      "id": 2,
+      "position": "Web & Graphic Designer",
+      "company": "Triple V",
+      "location": "Santiago. Chile",
+      "from": "2017",
+      "to": "2018",
+      "description": "Diseño gráfico en general para diferentes clientes de la agencia, además de construir sitios webs usando Wordpress."
+    },
+    {
+      "id": 1,
+      "position": "Graphic Designer",
+      "company": "Dann",
+      "location": "Santiago. Chile",
+      "from": "Freelance",
+      "to": "",
+      "description": "Always On, cuando se puede realizo trabajos de diseño gráfico en general o sitios web."
+    }
+  ]
+}
