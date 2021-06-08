@@ -44,7 +44,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="http://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet" />
+          <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet" />
         </Head>
         <body>
           <Main />
