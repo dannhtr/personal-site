@@ -2,7 +2,7 @@
 
 module.exports = {
   // distDir: 'build',
-  target: 'serverless',
+  // target: 'serverless',
   // webpack(config) {
   //   config.resolve.modules.push(path.resolve('./'));
   //   return config;
