@@ -9,18 +9,25 @@ const StyledSocial = styled.div<SpaceProps>`
   }
 `;
 
-const Social = ({ ...props }: SpaceProps) => {
+interface SocialProps extends SpaceProps {
+  networks: {
+    icon: {
+      [key: string]: string;
+    };
+    url: string;
+  }[];
+}
+
+const Social = ({ networks, ...props }: SocialProps) => {
   return (
     <StyledSocial {...props}>
-      <a href="https://github.com/dannhtr" target="_blank" rel="noopener noreferrer">
-        <img src="./github.png" alt="github" />
-      </a>
-      <a href="https://instagram.com/dannhtr" target="_blank" rel="noopener noreferrer">
-        <img src="./instagram.png" alt="instagram" />
-      </a>
-      <a href="https://www.linkedin.com/in/dannhtr/" target="_blank" rel="noopener noreferrer">
-        <img src="./linkedin.png" alt="linkedin" />
-      </a>
+      {networks.map((item) => {
+        return (
+          <a key={item.icon.name} href={item.url} target="_blank" rel="noopener noreferrer">
+            <img src={item.icon.url} alt="github" />
+          </a>
+        );
+      })}
     </StyledSocial>
   );
 };

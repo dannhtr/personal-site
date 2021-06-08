@@ -32,6 +32,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet" />
+          <link rel="shortcut icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />
