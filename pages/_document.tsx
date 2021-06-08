@@ -45,6 +45,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet" />
+          {this.props.styles}
         </Head>
         <body>
           <Main />
