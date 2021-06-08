@@ -22,7 +22,6 @@
     "start": "next start",
     "build": "next build",
     "test": "next test",
-    "export": "next export",
     "dev": "next dev"
   },
   "eslintConfig": {
