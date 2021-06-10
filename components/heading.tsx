@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   space,
   color,
@@ -19,7 +19,12 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
+type StyledProps = {
+  gradient?: boolean;
+};
+
 type Props = HeadingProps &
+  StyledProps &
   SpaceProps &
   ColorProps &
   TypographyProps &
@@ -27,8 +32,18 @@ type Props = HeadingProps &
   PositionProps &
   ZIndexProps;
 
-const StyledHeading = styled(motion.h1)`
+const StyledHeading = styled(motion.h1)<StyledProps>`
   margin: 0;
+
+  ${({ gradient }) =>
+    gradient
+      ? css`
+          background: ${({ theme }) => theme.colors.gradient};
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        `
+      : null}
+
   ${space};
   ${color};
   ${typography}
@@ -37,8 +52,8 @@ const StyledHeading = styled(motion.h1)`
   ${zIndex}
 `;
 
-const Heading: React.FC<Props> = ({ ...props }) => {
-  return <StyledHeading as="h1" {...props} />;
+const Heading: React.FC<Props> = ({ gradient, ...props }) => {
+  return <StyledHeading as="h1" gradient={gradient} {...props} />;
 };
 
 Heading.defaultProps = {

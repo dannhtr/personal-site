@@ -16,19 +16,20 @@ import {
 } from 'styled-system';
 
 export const StyledIntro = styled.section<{ background: string }>`
-  height: auto;
+  height: 100%;
   background-color: ${({ theme }) => theme.colors.secondary};
 
-  background-image: url(${({ background }) => background});
+  /* background-image: url(${({ background }) => background}); */
   background-size: 400px;
-  /* background-position: left 50%; */
   background-repeat: no-repeat;
-  padding-top: 190px;
-  padding-bottom: 200px;
+  padding-top: 300px;
+  padding-bottom: 300px;
 
-  background-position-y: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  ${({ theme }) => theme.mediaQueries.xs} {
+  /* ${({ theme }) => theme.mediaQueries.xs} {
     background-size: 600px;
     background-position: center 55%;
     background-repeat: no-repeat;
@@ -66,7 +67,7 @@ export const StyledIntro = styled.section<{ background: string }>`
 
   ${({ theme }) => theme.mediaQueries.xxl} {
     background-position-x: 80%;
-  }
+  } */
 `;
 
 type TitleProps = SpaceProps &
@@ -92,6 +93,11 @@ export const Title = styled.div<TitleProps>`
 
 export const Content = styled.div`
   display: flex;
+  justify-content: center;
+  text-align: center;
+
+  top: 100px;
+  position: relative;
 `;
 
 export const Item = styled(motion.div)`

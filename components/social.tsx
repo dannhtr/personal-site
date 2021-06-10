@@ -24,7 +24,7 @@ const Social = ({ networks, ...props }: SocialProps) => {
       {networks.map((item) => {
         return (
           <a key={item.icon.name} href={item.url} target="_blank" rel="noopener noreferrer">
-            <img src={item.icon.url} alt="github" />
+            <img src={item.icon.url} alt="github" width="20" />
           </a>
         );
       })}

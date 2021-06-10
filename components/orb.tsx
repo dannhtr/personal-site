@@ -1,16 +1,48 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+import Container from './container';
+
+const WrapperOrb = styled.div`
+  position: absolute;
+  height: auto;
+  width: 100%;
+  pointer-events: none;
+  /* mix-blend-mode: difference; */
+  /* overflow-x: hidden;
+
+  display: flex;
+  justify-content: center; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 30px;
+`;
+
 const StyledOrb = styled(motion.div)`
-  position: relative;
+  /* position: relative;
   z-index: 1;
   width: 1200px;
   height: 1200px;
   background: rgb(255, 255, 255);
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 60%);
-  right: 5%;
+  left: calc(50% - 260px);
   top: -300px;
-  opacity: 0.5;
+  opacity: 0.5; */
+
+  position: absolute;
+  margin: 0 auto;
+  /* top: 50px; */
+
+  display: flex;
+  width: 400px;
+  height: 400px;
+  filter: blur(40px);
+
+  border-radius: 50%;
+  background: ${({ theme }) => theme.colors.gradient};
 
   /* ${({ theme }) => theme.mediaQueries.sm} {
     width: 120px;
@@ -25,31 +57,25 @@ const StyledOrb = styled(motion.div)`
   } */
 `;
 
-const WrapperOrb = styled.div`
+const StyledBlackOrb = styled(motion.div)`
   position: absolute;
-  height: 100%;
-  width: 100%;
 
   display: flex;
-  justify-content: flex-end;
-  /* 
-  overflow-x: hidden; */
-  pointer-events: none;
+  width: 360px;
+  height: 360px;
 
-  mix-blend-mode: overlay;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  filter: blur(5px);
 `;
 
 const Orb = () => {
   return (
     <WrapperOrb>
-      <StyledOrb
-      // animate={{ scale: [1.5, 2], opacity: [0.4, 0.8], top: ['35%', '20%'] }}
-      // transition={{
-      //   flip: Infinity,
-      //   duration: 2,
-      //   ease: 'easeInOut',
-      // }}
-      ></StyledOrb>
+      {/* <Container> */}
+      <StyledOrb />
+      <StyledBlackOrb />
+      {/* </Container> */}
     </WrapperOrb>
   );
 };

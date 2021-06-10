@@ -5,15 +5,19 @@ import { Client } from '../config/prismic-config';
 import Intro from '../components/intro/intro';
 import SkillsTools from './skillstools';
 import WorkExperience from '../components/workexperience';
-import Orb from '../components/orb';
+import Picture from '../components/picture';
+import Extra from '../components/extra';
+import Noise from '../components/noise';
 
 const HomePage = ({ jobs, intro, networks }) => {
   return (
     <>
-      <Orb />
+      <Noise />
       <Intro intro={intro} networks={networks} />
       <SkillsTools />
       <WorkExperience jobs={jobs} />
+      <Picture />
+      <Extra />
     </>
   );
 };
@@ -28,8 +32,6 @@ export async function getStaticProps() {
   const {
     data: { networks },
   } = await Client().getSingle('social', {});
-
-  console.log(networks);
 
   return {
     props: {

@@ -1,14 +1,32 @@
+import { DefaultTheme } from 'styled-components';
+
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    colors: typeof colors;
+    radii: typeof radii;
+    fontSizes: typeof fontSizes;
+    fonts: typeof fonts;
+    lineHeights: typeof lineHeights;
+    borderWidths: typeof borderWidths;
+    space: typeof space;
+    breakpoints: typeof breakpoints;
+    mediaQueries: typeof mediaQueries;
+  }
+}
+
 const colors = {
-  primary: '#00FF85',
-  secondary: '#131B21',
+  primary: '#2EFAD5',
+  secondary: '#22272B',
   bg: '#FAFAFA',
   white: '#fff',
   gray: '#C4C4C4',
-  border: '#192731',
+  border: '#272D31',
+  gradient:
+    'linear-gradient(353deg,rgb(80 255 247) 0%,rgba(0,0,0,0) 80%),linear-gradient(90deg,#00ff85 0%,rgb(255 255 255 / 0%) 100%),linear-gradient(255deg,#3686ff 0%,rgb(47 253 91) 80%)',
 };
 const radii = { small: 4, medium: 8, large: 12 };
 const fontSizes = {
-  mini: 12,
+  mini: 14,
   small: 18,
   default: 24,
   medium: 36,
@@ -52,7 +70,7 @@ const mediaQueries = {
   xxl: `@media (min-width: ${breakpoints.xxl})`,
 };
 
-const defaultTheme = {
+const myTheme: DefaultTheme = {
   colors,
   radii,
   fontSizes,
@@ -64,5 +82,4 @@ const defaultTheme = {
   mediaQueries,
 };
 
-export type ThemeType = typeof defaultTheme;
-export default defaultTheme;
+export default myTheme;

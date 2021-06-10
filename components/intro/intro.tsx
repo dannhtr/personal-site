@@ -1,14 +1,15 @@
 import { RichText } from 'prismic-reactjs';
 
 import theme from '../../styles/theme';
-import { Heading, Text, Container, Nav, Social } from '..';
+import { Heading, Text, Container, Nav, Social, Orb } from '..';
 import { StyledIntro, Content, Item, Title } from './intro.styles';
 
 const Intro = ({ intro, networks }) => {
   return (
     <StyledIntro background={intro.header_image.url}>
+      <Orb />
       <Container>
-        <Nav />
+        {/* <Nav /> */}
         <Content>
           <Item>
             <Title
@@ -25,19 +26,19 @@ const Intro = ({ intro, networks }) => {
               as="h2"
               fontSize="small"
               fontWeight="500"
-              color="primary"
+              color="white"
               lineHeight="default"
               letterSpacing="1.5px"
               mb="24px"
-              maxWidth={{ _: '200px', sm: 'none' }}
+              gradient
             >
               {RichText.asText(intro.subtitle)}
             </Heading>
             <Text
               color="white"
               position="relative"
-              maxWidth={{ lg: '500px' }}
-              marginTop={{ _: `${theme.space.colossus * 6}px`, sm: 'auto' }}
+              maxWidth={{ lg: '800px' }}
+              margin="auto"
               letterSpacing={1}
             >
               {RichText.asText(intro.description)}

@@ -30,7 +30,14 @@ const SkillsTools = () => {
 
         <Row>
           <Col md={4} style={{ marginBottom: 56 }}>
-            <Heading as="h4" color="primary" fontWeight="500" fontSize="default" mb="medium">
+            <Heading
+              as="h4"
+              color="primary"
+              fontWeight="500"
+              fontSize="default"
+              mb="medium"
+              gradient
+            >
               {frontend.title}
             </Heading>
             <Heading
@@ -48,7 +55,14 @@ const SkillsTools = () => {
             </Text>
           </Col>
           <Col md={4} offset={{ md: 2 }} style={{ marginBottom: 56 }}>
-            <Heading as="h4" color="primary" fontWeight="500" fontSize="default" mb="medium">
+            <Heading
+              as="h4"
+              color="primary"
+              fontWeight="500"
+              fontSize="default"
+              mb="medium"
+              gradient
+            >
               {design.title}
             </Heading>
             <Heading

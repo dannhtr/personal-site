@@ -31,30 +31,30 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
           {jobs?.map((job) => {
             return (
               <JobItem key={job.id}>
-                <Heading as="h4" color="primary" fontWeight="500" fontSize="default" mb="medium">
-                  {ToRichText(job.data.position)}
-                </Heading>
                 <Heading
                   as="h4"
-                  color="white"
-                  fontWeight="400"
+                  color="primary"
+                  fontWeight="500"
                   fontSize="default"
-                  lineHeight="medium"
+                  mb="16px"
+                  gradient
                 >
+                  {ToRichText(job.data.position)}
+                </Heading>
+                <Heading as="h4" color="gray" fontWeight="400" fontSize="small" lineHeight="medium">
                   {ToRichText(job.data.company)} / {ToRichText(job.data.location)}
                 </Heading>
                 <Heading
-                  as="h6"
-                  color="white"
+                  as="h4"
+                  color="gray"
                   fontWeight="400"
                   fontSize="mini"
-                  mb="medium"
                   lineHeight="medium"
-                  opacity="0.7"
+                  mb="medium"
                 >
                   {ToRichText(job.data.duration)}
                 </Heading>
-                <Text color="white" opacity="0.5" letterSpacing={1} fontSize={16}>
+                <Text color="white" letterSpacing={1}>
                   {ToRichText(job.data.description)}
                 </Text>
               </JobItem>
