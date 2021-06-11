@@ -6,7 +6,7 @@ const BlackHole = () => {
   const [C, setC] = useState();
   const [ctx, setCtx] = useState();
   // const [radiusLimit, setRadiusLimit] = useState();
-  const [holeRadius, setHoleRadius] = useState(0);
+  const [holeRadius, setHoleRadius] = useState(200);
   const [mouseDown, setMouseDown] = useState(false);
 
   let holeVolume = 0;
@@ -29,7 +29,7 @@ const BlackHole = () => {
     })();
   }, []);
 
-  const makeStar = (newStar) => {
+  const makeStar = () => {
     let x, y, r, volume, color, angle, orbitRadius, angularSpeed, randomSpeed0, acceleration;
 
     if (C) {
@@ -37,21 +37,25 @@ const BlackHole = () => {
       y = C.height / 2;
       r = Math.ceil(Math.random() * 2);
       volume = (4 / 3) * Math.PI * Math.pow(r, 3);
-      color = 'rgba(255,255,255,1)';
+      color = `rgba(255,255,255,.${Math.random()})`;
       angle = Math.random() * (2 * Math.PI);
 
-      if (newStar === 0) {
-        orbitRadius = (Math.random() * (C.width + C.height)) / 3;
-      } else {
-        orbitRadius =
-          Math.sqrt(
-            (C.width / 2 - C.width) * (C.width / 2 - C.width) +
-              (C.height / 2 - C.height) * (C.height / 2 - C.height)
-          ) +
-          Math.random() * 400;
-      }
+      // if (newStar === 0) {
+      //   orbitRadius = (Math.random() * (C.width + C.height)) / 3;
+      // } else {
+      //   orbitRadius =
+      //     Math.sqrt(
+      //       (C.width / 2 - C.width) * (C.width / 2 - C.width) +
+      //         (C.height / 2 - C.height) * (C.height / 2 - C.height)
+      //     ) +
+      //     Math.random() * 400;
+      // }
 
-      angularSpeed = 0.5 * Math.random() * (Math.PI / orbitRadius);
+      orbitRadius = Math.sqrt((C.width / 6) * (C.height / 6)) + Math.random() * 1000;
+
+      // orbitRadius = (Math.random() * (C.width + C.height)) / 3;
+
+      angularSpeed = 1 * Math.random() * (Math.PI / orbitRadius);
       randomSpeed0 = Math.random() * (Math.PI / (10 * orbitRadius));
       acceleration = 0;
 
@@ -72,7 +76,7 @@ const BlackHole = () => {
 
   const init = () => {
     for (let i = 0; i < num; i++) {
-      makeStar(0);
+      makeStar();
     }
   };
 
@@ -87,7 +91,7 @@ const BlackHole = () => {
 
   const setBg = () => {
     if (ctx) {
-      ctx.fillStyle = 'rgba(34,39,43,1)';
+      ctx.fillStyle = 'rgba(34,39,43,0.7)';
       ctx.fillRect(0, 0, C.width, C.height);
     }
   };
@@ -113,6 +117,7 @@ const BlackHole = () => {
   // };
 
   const updateStar = (star) => {
+    // console.log(star);
     star.x = C.width / 2 + Math.sin(star.angle) * star.orbitRadius;
     star.y = C.height / 40 + Math.cos(star.angle) * star.orbitRadius;
 
@@ -120,11 +125,11 @@ const BlackHole = () => {
 
     star.acceleration = (G * (star.r * holeVolume)) / Math.pow(star.orbitRadius, 2) + 0.1;
 
-    star.color = `rgba(255, ${
-      +Math.round(255 * ((star.orbitRadius - holeRadius) / 200)) +
+    star.color = `rgba(0, ${
+      +Math.round(180 * ((star.orbitRadius - holeRadius) / 300)) +
       ',' +
-      Math.round(255 * ((star.orbitRadius - holeRadius) / 200)) +
-      ',1'
+      Math.round(140 * ((star.orbitRadius - holeRadius) / 300)) +
+      '.8'
     })`;
 
     // star.color = `rgba(46, 250, 213,0.5)`;
@@ -135,7 +140,7 @@ const BlackHole = () => {
       // addedMass += star.r;
       // console.log((addedMass += star.r));
       R.splice(star, 1);
-      makeStar(1);
+      makeStar();
     }
   };
 
@@ -155,7 +160,7 @@ const BlackHole = () => {
 
   const loop = () => {
     setBg();
-    holeVolume = (3 / 4) * Math.PI * Math.pow(holeRadius, 3);
+    holeVolume = (3 / 4) * Math.PI * Math.pow(holeRadius, 0.2);
 
     R.map((star, i) => {
       if (isVisible(star)) {
