@@ -41,6 +41,7 @@ const StyledHeading = styled(motion.h1)<StyledProps>`
           background: ${({ theme }) => theme.colors.gradient};
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          mix-blend-mode: color-dodge;
         `
       : null}
 

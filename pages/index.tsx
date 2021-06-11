@@ -8,10 +8,18 @@ import WorkExperience from '../components/workexperience';
 import Picture from '../components/picture';
 import Extra from '../components/extra';
 import Noise from '../components/noise';
+// import BlackHole from '../components/BlackHole';
+
+import dynamic from 'next/dynamic';
+
+const BlackHole = dynamic(() => import('../components/BlackHole'), {
+  ssr: false,
+});
 
 const HomePage = ({ jobs, intro, networks }) => {
   return (
     <>
+      <BlackHole />
       <Noise />
       <Intro intro={intro} networks={networks} />
       <SkillsTools />

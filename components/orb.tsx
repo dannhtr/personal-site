@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Container from './container';
 
 const WrapperOrb = styled.div`
-  position: absolute;
+  position: fixed;
   height: auto;
   width: 100%;
   pointer-events: none;
@@ -17,7 +17,7 @@ const WrapperOrb = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  mix-blend-mode: color-dodge;
   top: 30px;
 `;
 
