@@ -55,8 +55,8 @@ const BlackHole = () => {
 
       // orbitRadius = (Math.random() * (C.width + C.height)) / 3;
 
-      angularSpeed = 1 * Math.random() * (Math.PI / orbitRadius);
-      randomSpeed0 = Math.random() * (Math.PI / (10 * orbitRadius));
+      angularSpeed = 0.5 * Math.random() * (Math.PI / orbitRadius);
+      randomSpeed0 = Math.random() * (Math.PI / (2 * orbitRadius));
       acceleration = 0;
 
       R.push({
@@ -116,7 +116,7 @@ const BlackHole = () => {
   //   }
   // };
 
-  const updateStar = (star) => {
+  const updateStar = (star, i) => {
     // console.log(star);
     star.x = C.width / 2 + Math.sin(star.angle) * star.orbitRadius;
     star.y = C.height / 40 + Math.cos(star.angle) * star.orbitRadius;
@@ -139,7 +139,7 @@ const BlackHole = () => {
     } else {
       // addedMass += star.r;
       // console.log((addedMass += star.r));
-      R.splice(star, 1);
+      R.splice(i, 1);
       makeStar();
     }
   };
@@ -166,7 +166,7 @@ const BlackHole = () => {
       if (isVisible(star)) {
         drawStar(star);
       }
-      updateStar(star);
+      updateStar(star, i);
     });
 
     // drawCenter();
