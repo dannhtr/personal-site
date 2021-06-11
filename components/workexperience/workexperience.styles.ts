@@ -17,7 +17,7 @@ export const JobItem = styled.div`
   padding: 2rem;
   border: 2px solid ${({ theme }) => theme.colors.border};
   border-radius: 0.5rem;
-
+  z-index: 2;
   transition: background-color 0.3s ease;
 
   &:hover {
