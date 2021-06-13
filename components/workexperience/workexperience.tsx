@@ -1,7 +1,7 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
 
-import { Container, Heading, Text } from '..';
+import { Container, Heading, Text, Fade } from '..';
 import { Section, Jobs, JobItem } from './workexperience.styles';
 
 interface WorkExperienceProps {
@@ -16,6 +16,7 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
   return (
     <Section>
       <Container>
+        {/* <Fade> */}
         <Heading
           as="h1"
           fontSize={{ _: 'xlarge', lg: 'gigant' }}
@@ -27,9 +28,12 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
         >
           Work Experience
         </Heading>
+        {/* </Fade> */}
+
         <Jobs>
           {jobs?.map((job) => {
             return (
+              // <Fade key={job.id}>
               <JobItem key={job.id}>
                 <Heading
                   as="h4"
@@ -58,6 +62,7 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
                   {ToRichText(job.data.description)}
                 </Text>
               </JobItem>
+              // </Fade>
             );
           })}
         </Jobs>

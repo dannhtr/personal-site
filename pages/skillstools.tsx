@@ -2,20 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-grid-system';
 
-import { Container, Heading, Text } from '../components';
+import { Container, Heading, Text, Fade } from '../components';
 
 import { frontend, design } from '../data/skills.json';
 
 const StyledSkillsTools = styled.section`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus * 2}px;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  /* background-color: ${({ theme }) => theme.colors.secondary}; */
 `;
 
 const SkillsTools = () => {
   return (
     <StyledSkillsTools>
       <Container>
+        {/* <Fade> */}
         <Heading
           as="h1"
           fontSize={{ _: 'xlarge', lg: 'gigant' }}
@@ -25,11 +26,13 @@ const SkillsTools = () => {
           zIndex={2}
           mb={100}
         >
-          Skills & Tools
+          Skills
         </Heading>
+        {/* </Fade> */}
 
         <Row>
           <Col md={4} style={{ marginBottom: 56 }}>
+            {/* <Fade> */}
             <Heading
               as="h4"
               color="primary"
@@ -40,6 +43,7 @@ const SkillsTools = () => {
             >
               {frontend.title}
             </Heading>
+            {/* </Fade> */}
             <Heading
               as="h4"
               color="white"
@@ -54,6 +58,7 @@ const SkillsTools = () => {
               {frontend.tools}
             </Text>
           </Col>
+
           <Col md={4} offset={{ md: 2 }} style={{ marginBottom: 56 }}>
             <Heading
               as="h4"

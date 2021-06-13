@@ -1,13 +1,14 @@
 import { RichText } from 'prismic-reactjs';
 
 import theme from '../../styles/theme';
-import { Heading, Text, Container, Nav, Social, Orb } from '..';
+import { Heading, Text, Container, Nav, Social, Orb, Fade } from '..';
 import { StyledIntro, Content, Item, Title } from './intro.styles';
 
 const Intro = ({ intro, networks }) => {
   return (
     <StyledIntro background={intro.header_image.url}>
       <Orb />
+
       <Container>
         {/* <Nav /> */}
         <Content>

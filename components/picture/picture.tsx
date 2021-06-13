@@ -2,15 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-grid-system';
 
-import { Container, Heading } from '..';
+import { Container, Heading, Fade } from '..';
 
 const StyledPicture = styled.section`
-  background-color: ${({ theme }) => theme.colors.secondary}};
+  background-color: ${({ theme }) => theme.colors.secondary};
 
   figure {
     margin: 0;
     position: relative;
     top: -100px;
+
+    img {
+      border-radius: 16px;
+    }
   }
 `;
 

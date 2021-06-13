@@ -182,6 +182,7 @@ const BlackHole = () => {
 
   useEffect(() => {
     window.addEventListener('resize', () => {
+      console.log('algo');
       setCanvasSize();
     });
 

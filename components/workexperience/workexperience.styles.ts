@@ -10,17 +10,17 @@ export const Jobs = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-auto-rows: 1fr;
-  gap: 2rem;
+  gap: 3rem;
 `;
 
 export const JobItem = styled.div`
-  padding: 2rem;
-  border: 2px solid ${({ theme }) => theme.colors.border};
-  border-radius: 0.5rem;
+  /* border: 2px solid ${({ theme }) => theme.colors.border}; */
+  /* border-radius: 0.5rem; */
   z-index: 2;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s ease;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.border};
+    /* border: 2px solid ${({ theme }) => theme.colors.border}; */
+    /* transform: translateY(-10px); */
   }
 `;

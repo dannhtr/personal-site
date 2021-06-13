@@ -2,7 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    colors: typeof colors;
+    colors: ColorProps;
     radii: typeof radii;
     fontSizes: typeof fontSizes;
     fonts: typeof fonts;
@@ -14,6 +14,8 @@ declare module 'styled-components' {
   }
 }
 
+export type ColorProps = typeof colors;
+
 const colors = {
   primary: '#2EFAD5',
   secondary: '#22272B',
@@ -24,6 +26,7 @@ const colors = {
   gradient:
     'linear-gradient(353deg,rgb(80 255 247) 0%,rgba(0,0,0,0) 80%),linear-gradient(90deg,#00ff85 0%,rgb(255 255 255 / 0%) 100%),linear-gradient(255deg,#3686ff 0%,rgb(47 253 91) 80%)',
 };
+
 const radii = { small: 4, medium: 8, large: 12 };
 const fontSizes = {
   mini: 14,

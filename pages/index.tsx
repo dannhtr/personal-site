@@ -8,7 +8,6 @@ import WorkExperience from '../components/workexperience';
 import Picture from '../components/picture';
 import Extra from '../components/extra';
 import Noise from '../components/noise';
-// import BlackHole from '../components/BlackHole';
 
 import dynamic from 'next/dynamic';
 

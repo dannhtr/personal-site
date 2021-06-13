@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Icon } from '../components';
 import { space, SpaceProps } from 'styled-system';
 
 const StyledSocial = styled.div<SpaceProps>`
@@ -6,14 +7,19 @@ const StyledSocial = styled.div<SpaceProps>`
 
   a {
     margin-right: ${({ theme }) => theme.space.medium}px;
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease-in;
+
+    &:hover {
+      top: -6px;
+    }
   }
 `;
 
 interface SocialProps extends SpaceProps {
   networks: {
-    icon: {
-      [key: string]: string;
-    };
+    name: string;
     url: string;
   }[];
 }
@@ -23,8 +29,8 @@ const Social = ({ networks, ...props }: SocialProps) => {
     <StyledSocial {...props}>
       {networks.map((item) => {
         return (
-          <a key={item.icon.name} href={item.url} target="_blank" rel="noopener noreferrer">
-            <img src={item.icon.url} alt="github" width="20" />
+          <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer">
+            <Icon name={item.name} size={32} />
           </a>
         );
       })}
