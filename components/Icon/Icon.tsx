@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ColorProps } from '../../styles/theme';
 
 const StyledSVG = styled.div<{ fill: string }>`
-  display: inline-block;
+  display: inline-flex;
 
   & * {
     fill: ${({ fill }) => fill};
@@ -33,7 +33,7 @@ const Icon = ({ name, size = 32, fill = 'white', ...props }) => {
 
     return (
       <StyledSVG fill={fill}>
-        <ImportedIcon width={size} viewBox={`0 0 32 32`} {...props} />
+        <ImportedIcon width={size} height="auto" viewBox={`0 0 32 32`} {...props} />
       </StyledSVG>
     );
   }

@@ -4,6 +4,14 @@ export const Section = styled.section`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus * 4}px;
   background-color: ${({ theme }) => theme.colors.secondary};
+
+  position: relative;
+  z-index: 2;
+  border-radius: ${({ theme }) => theme.radii.large}px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    margin: ${({ theme }) => theme.space.large}px;
+  }
 `;
 
 export const Jobs = styled.div`

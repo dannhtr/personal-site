@@ -1,17 +1,16 @@
 import { RichText } from 'prismic-reactjs';
 
 import theme from '../../styles/theme';
-import { Heading, Text, Container, Nav, Social, Orb, Fade } from '..';
+import { Heading, Text, Nav, Social, Orb, Fade } from '..';
 import { StyledIntro, Content, Item, Title } from './intro.styles';
 
 const Intro = ({ intro, networks }) => {
   return (
     <StyledIntro background={intro.header_image.url}>
       <Orb />
-
-      <Container>
-        {/* <Nav /> */}
-        <Content>
+      {/* <Nav /> */}
+      <Content>
+        <Fade>
           <Item>
             <Title
               fontSize={{ _: 'xlarge', lg: 'gigant' }}
@@ -52,8 +51,8 @@ const Intro = ({ intro, networks }) => {
               networks={networks}
             />
           </Item>
-        </Content>
-      </Container>
+        </Fade>
+      </Content>
     </StyledIntro>
   );
 };

@@ -95,9 +95,8 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-
-  top: 100px;
-  position: relative;
+  width: 100%;
+  position: fixed;
 `;
 
 export const Item = styled(motion.div)`
