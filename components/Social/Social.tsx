@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Icon } from '..';
 import { space, SpaceProps } from 'styled-system';
-import { IconNames } from '../Icon/Icon';
 
 const StyledSocial = styled.div<SpaceProps>`
   ${space}
@@ -32,7 +31,7 @@ const Social = ({ networks, ...props }: SocialProps) => {
         console.log(item.name);
         return (
           <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer">
-            <Icon name={IconNames[item.name]} size={32} />
+            <Icon name={item.name} size={32} />
           </a>
         );
       })}

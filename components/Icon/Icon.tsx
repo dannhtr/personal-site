@@ -2,18 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { space, SpaceProps } from 'styled-system';
 
-export enum IconNames {
-  github = 'github',
-  instagram = 'instagram',
-  linkedin = 'linkedin',
-  location = 'location',
-  nextjs = 'nextjs',
-  prismic = 'prismic',
-  vercel = 'vercel',
-}
-
 interface IconProps extends SpaceProps {
-  name: IconNames;
+  name: string;
   size?: number;
   fill?: string;
 }
