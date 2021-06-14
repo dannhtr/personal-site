@@ -43,7 +43,6 @@ interface PictureProps {
 }
 
 const Picture = ({ picture }: { picture: PictureProps }) => {
-  console.log(picture);
   return (
     <StyledPicture>
       <Container>

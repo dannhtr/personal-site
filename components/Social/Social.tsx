@@ -28,7 +28,6 @@ const Social = ({ networks, ...props }: SocialProps) => {
   return (
     <StyledSocial {...props}>
       {networks.map((item) => {
-        console.log(item.name);
         return (
           <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer">
             <Icon name={item.name} size={32} />

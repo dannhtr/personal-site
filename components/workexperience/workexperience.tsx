@@ -17,8 +17,6 @@ const WorkExperience = ({ jobs, resume }: WorkExperienceProps & ResumeProps) => 
     return RichText.asText(data);
   };
 
-  console.log(resume);
-
   return (
     <Section>
       <Container>
