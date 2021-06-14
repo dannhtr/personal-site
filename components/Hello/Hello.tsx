@@ -2,11 +2,11 @@ import { RichText } from 'prismic-reactjs';
 
 import theme from '../../styles/theme';
 import { Heading, Text, Nav, Social, Orb, Fade } from '..';
-import { StyledIntro, Content, Item, Title } from './Intro.styles';
+import { StyledHello, Content, Item, Title } from './Intro.styles';
 
-const Intro = ({ intro, networks }) => {
+const Hello = ({ intro, networks }) => {
   return (
-    <StyledIntro background={intro.header_image.url}>
+    <StyledHello background={intro.header_image.url}>
       <Orb />
       {/* <Nav /> */}
       <Content>
@@ -53,8 +53,8 @@ const Intro = ({ intro, networks }) => {
           </Item>
         </Fade>
       </Content>
-    </StyledIntro>
+    </StyledHello>
   );
 };
 
-export default Intro;
+export default Hello;

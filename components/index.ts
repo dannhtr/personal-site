@@ -5,7 +5,7 @@ export { default as Footer } from './Footer';
 export { default as Heading } from './Heading';
 export { default as Hobbies } from './Hobbies';
 export { default as Icon } from './Icon';
-export { default as Intro } from './Intro';
+export { default as Hello } from './Hello';
 export { default as Nav } from './Nav';
 export { default as Noise } from './Noise';
 export { default as Orb } from './Orb';

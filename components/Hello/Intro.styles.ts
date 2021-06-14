@@ -15,7 +15,7 @@ import {
   ZIndexProps,
 } from 'styled-system';
 
-export const StyledIntro = styled.section<{ background: string }>`
+export const StyledHello = styled.section<{ background: string }>`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.secondary};
 
