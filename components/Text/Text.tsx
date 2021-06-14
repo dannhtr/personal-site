@@ -17,7 +17,7 @@ type Props = LayoutProps & SpaceProps & ColorProps & PositionProps & TypographyP
 const Text = styled.p<Props>`
   font-size: ${({ theme }) => theme.fontSizes.small}px;
   line-height: ${({ theme }) => theme.lineHeights.medium};
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 
   ${space};
