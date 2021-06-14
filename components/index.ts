@@ -7,7 +7,7 @@ export { default as Orb } from './Orb';
 export { default as Fade } from './Fade';
 export { default as Icon } from './Icon';
 export { default as Skills } from './Skills';
-export { default as Extra } from './Extra';
+export { default as Hobbies } from './Hobbies';
 export { default as Intro } from './Intro';
 export { default as WorkExperience } from './WorkExperience';
 export { default as Picture } from './Picture';

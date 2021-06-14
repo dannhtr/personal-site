@@ -2,7 +2,7 @@ import Prismic from '@prismicio/client';
 
 import { Client } from '../config/prismic-config';
 
-import { Intro, Skills, WorkExperience, Picture, Extra, Noise, Footer } from '../components';
+import { Intro, Skills, WorkExperience, Picture, Hobbies, Noise, Footer } from '../components';
 
 import dynamic from 'next/dynamic';
 
@@ -19,7 +19,7 @@ const HomePage = ({ jobs, intro, networks, picture, resume }) => {
       <Skills />
       <WorkExperience jobs={jobs} resume={resume} />
       <Picture picture={picture} />
-      <Extra />
+      <Hobbies />
       <Footer />
     </>
   );
