@@ -2,10 +2,18 @@ import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { space, SpaceProps } from 'styled-system';
 
-type Name = 'github' | 'instagram' | 'linkedin' | 'location' | 'nextjs' | 'prismic' | 'vercel';
+export enum IconNames {
+  github = 'github',
+  instagram = 'instagram',
+  linkedin = 'linkedin',
+  location = 'location',
+  nextjs = 'nextjs',
+  prismic = 'prismic',
+  vercel = 'vercel',
+}
 
 interface IconProps extends SpaceProps {
-  name: Name;
+  name: IconNames;
   size?: number;
   fill?: string;
 }
@@ -21,7 +29,6 @@ const StyledSVG = styled.div<{ fill: string }>`
 `;
 
 const Icon = ({ name, size = 32, fill = 'white', ...props }: IconProps) => {
-  console.log(props);
   const ImportedIconRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
