@@ -9,7 +9,7 @@ export { default as Icon } from './Icon';
 export { default as Skills } from './Skills';
 export { default as Hobbies } from './Hobbies';
 export { default as Footer } from './Footer';
-export { default as Intro } from './Intro';
 export { default as WorkExperience } from './WorkExperience';
 export { default as Picture } from './Picture';
 export { default as Noise } from './Noise';
+export { default as Intro } from './Intro';
