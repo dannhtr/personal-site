@@ -32,18 +32,29 @@ const StyledPicture = styled.section`
   }
 `;
 
-const Picture = () => {
+interface PictureProps {
+  location: string;
+  photo: {
+    dimensions: { width: number; height: number };
+    alt: string;
+    copyright: string;
+    url: string;
+  };
+}
+
+const Picture = ({ picture }: { picture: PictureProps }) => {
+  console.log(picture);
   return (
     <StyledPicture>
       <Container>
         <Row>
           <Col>
             <figure>
-              <img src="./atacama.png" alt="San Pedro de Atacama" width="100%" />
+              <img src={picture.photo.url} alt={picture.photo.alt} width="100%" />
               <figcaption>
                 <Icon name="location" size={24} />
                 <Heading as="h5" fontWeight="500" ml="small" color="gray">
-                  San Pedro de Atacama. Chile
+                  {picture.location}
                 </Heading>
               </figcaption>
             </figure>

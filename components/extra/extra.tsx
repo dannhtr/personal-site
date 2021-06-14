@@ -4,7 +4,7 @@ import { Row, Col } from 'react-grid-system';
 
 import { Container, Heading, Text } from '..';
 
-const StyledValuesHobbies = styled.section`
+const StyledExtra = styled.section`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus}px;
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -18,9 +18,9 @@ const StyledValuesHobbies = styled.section`
   }
 `;
 
-const ValuesHobbies = () => {
+const Extra = () => {
   return (
-    <StyledValuesHobbies>
+    <StyledExtra>
       <Container>
         <Heading
           as="h1"
@@ -153,8 +153,8 @@ const ValuesHobbies = () => {
           </Col>
         </Row>
       </Container>
-    </StyledValuesHobbies>
+    </StyledExtra>
   );
 };
 
-export default ValuesHobbies;
+export default Extra;

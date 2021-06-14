@@ -1,1 +1,1 @@
-export { default } from './noise';
+export { default } from './Noise';

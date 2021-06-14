@@ -11,7 +11,6 @@ const Nav = () => {
   return (
     <StyledNav>
       <img src="./favicon.png" width="32px" alt="dann logo" />
-      {/* <img src='./dann-logo.png' width='80px' alt='dann logo' /> */}
     </StyledNav>
   );
 };

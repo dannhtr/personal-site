@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import Container from './container';
-
 const WrapperOrb = styled.div`
   position: fixed;
   height: auto;
@@ -72,10 +70,8 @@ const StyledBlackOrb = styled(motion.div)`
 const Orb = () => {
   return (
     <WrapperOrb>
-      {/* <Container> */}
       <StyledOrb />
       <StyledBlackOrb />
-      {/* </Container> */}
     </WrapperOrb>
   );
 };

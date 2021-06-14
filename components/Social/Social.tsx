@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icon } from '../components';
+import { Icon } from '..';
 import { space, SpaceProps } from 'styled-system';
 
 const StyledSocial = styled.div<SpaceProps>`

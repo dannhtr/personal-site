@@ -32,3 +32,29 @@ export const JobItem = styled.div`
     /* transform: translateY(-10px); */
   }
 `;
+
+export const Resume = styled.div`
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+`;
+
+export const Download = styled.a`
+  padding: ${({ theme }) => `${theme.space.medium}px ${theme.space.gigant}px`};
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.radii.medium}px;
+  border: 0;
+  color: ${({ theme }) => theme.colors.secondary};
+  text-decoration: none;
+
+  font-size: ${({ theme }) => theme.fontSizes.small}px;
+  font-family: ${({ theme }) => theme.fonts.default};
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color ease-in 0.2s;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.white};
+  }
+`;

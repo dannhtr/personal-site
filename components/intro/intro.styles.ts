@@ -97,6 +97,7 @@ export const Content = styled.div`
   text-align: center;
   width: 100%;
   position: fixed;
+  margin-top: 100px;
 `;
 
 export const Item = styled(motion.div)`

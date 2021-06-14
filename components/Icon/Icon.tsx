@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { ColorProps } from '../../styles/theme';
+import { space, SpaceProps } from 'styled-system';
+
+type Name = 'github' | 'instagram' | 'linkedin' | 'location' | 'nextjs' | 'prismic' | 'vercel';
+
+interface IconProps extends SpaceProps {
+  name: Name;
+  size?: number;
+  fill?: string;
+}
 
 const StyledSVG = styled.div<{ fill: string }>`
   display: inline-flex;
@@ -8,9 +16,12 @@ const StyledSVG = styled.div<{ fill: string }>`
   & * {
     fill: ${({ fill }) => fill};
   }
+
+  ${space};
 `;
 
-const Icon = ({ name, size = 32, fill = 'white', ...props }) => {
+const Icon = ({ name, size = 32, fill = 'white', ...props }: IconProps) => {
+  console.log(props);
   const ImportedIconRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
@@ -32,8 +43,8 @@ const Icon = ({ name, size = 32, fill = 'white', ...props }) => {
     const { current: ImportedIcon } = ImportedIconRef;
 
     return (
-      <StyledSVG fill={fill}>
-        <ImportedIcon width={size} height="auto" viewBox={`0 0 32 32`} {...props} />
+      <StyledSVG fill={fill} {...props}>
+        <ImportedIcon width={size} height={size} viewBox={`0 0 32 32`} />
       </StyledSVG>
     );
   }

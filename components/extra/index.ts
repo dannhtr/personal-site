@@ -1,1 +1,1 @@
-export { default } from './extra';
+export { default } from './Extra';

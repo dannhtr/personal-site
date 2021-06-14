@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-grid-system';
 
-import { Container, Heading, Text, Fade } from '../components';
+import { Container, Heading, Text, Fade } from '..';
 
-import { frontend, design } from '../data/skills.json';
+import { frontend, design } from '../../data/skills.json';
 
 const StyledSkillsTools = styled.section`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;

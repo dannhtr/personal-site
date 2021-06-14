@@ -17,7 +17,7 @@ declare module 'styled-components' {
 export type ColorProps = typeof colors;
 
 const colors = {
-  primary: '#2EFAD5',
+  primary: '#3EFD5E',
   secondary: '#22272B',
   bg: '#FAFAFA',
   white: '#fff',

@@ -52,7 +52,6 @@ const Fade = ({
   const opacityRange = useMemo(() => [opacityInitialValue, 1], [opacityInitialValue]);
 
   const yOpacityRange = [elementTop + offsetHeight * 3, elementTop - offsetHeight];
-  console.log(offsetHeight);
   const opacity = useTransform(scrollY, yOpacityRange, opacityRange);
   // const opacity = useSpring(transformRange, {});
 

@@ -1,17 +1,23 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
 
-import { Container, Heading, Text, Fade } from '..';
-import { Section, Jobs, JobItem } from './workexperience.styles';
+import { Container, Heading, Text } from '..';
+import { Section, Jobs, JobItem, Download, Resume } from './WorkExperience.styles';
 
 interface WorkExperienceProps {
   jobs: { [key: string]: any }[];
 }
 
-const WorkExperience = ({ jobs }: WorkExperienceProps) => {
+interface ResumeProps {
+  resume: any;
+}
+
+const WorkExperience = ({ jobs, resume }: WorkExperienceProps & ResumeProps) => {
   const ToRichText = (data: any) => {
     return RichText.asText(data);
   };
+
+  console.log(resume);
 
   return (
     <Section>
@@ -66,6 +72,13 @@ const WorkExperience = ({ jobs }: WorkExperienceProps) => {
             );
           })}
         </Jobs>
+      </Container>
+      <Container>
+        <Resume>
+          <Download href={resume.resume.url} target="_blank" rel="noopener noreferrer">
+            {resume.button_text}
+          </Download>
+        </Resume>
       </Container>
     </Section>
   );

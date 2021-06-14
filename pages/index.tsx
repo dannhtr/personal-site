@@ -2,12 +2,7 @@ import Prismic from '@prismicio/client';
 
 import { Client } from '../config/prismic-config';
 
-import Intro from '../components/intro/intro';
-import SkillsTools from './skillstools';
-import WorkExperience from '../components/workexperience';
-import Picture from '../components/picture';
-import Extra from '../components/extra';
-import Noise from '../components/noise';
+import { Intro, Skills, WorkExperience, Picture, Extra, Noise, Footer } from '../components';
 
 import dynamic from 'next/dynamic';
 
@@ -15,16 +10,17 @@ const BlackHole = dynamic(() => import('../components/BlackHole'), {
   ssr: false,
 });
 
-const HomePage = ({ jobs, intro, networks }) => {
+const HomePage = ({ jobs, intro, networks, picture, resume }) => {
   return (
     <>
       <BlackHole />
       <Noise />
       <Intro intro={intro} networks={networks} />
-      <SkillsTools />
-      <WorkExperience jobs={jobs} />
-      <Picture />
+      <Skills />
+      <WorkExperience jobs={jobs} resume={resume} />
+      <Picture picture={picture} />
       <Extra />
+      <Footer />
     </>
   );
 };
@@ -40,11 +36,17 @@ export async function getStaticProps() {
     data: { networks },
   } = await Client().getSingle('social', {});
 
+  const { data: picture } = await Client().getSingle('picture', {});
+
+  const { data: resume } = await Client().getSingle('resume', {});
+
   return {
     props: {
       jobs: jobs ? jobs : [],
       intro: intro,
       networks: networks,
+      picture: picture,
+      resume: resume,
     },
   };
 }
