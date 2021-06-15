@@ -2,7 +2,7 @@ import { RichText } from 'prismic-reactjs';
 
 import theme from '../../styles/theme';
 import { Heading, Text, Nav, Social, Orb, Fade } from '..';
-import { StyledHello, Content, Item, Title } from './Intro.styles';
+import { StyledHello, Content, Item, Title } from './Hello.styles';
 
 const Hello = ({ intro, networks }) => {
   return (
