@@ -4,7 +4,7 @@ import { Container } from '..';
 export const Section = styled(Container)`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus * 2}px;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  /* background-color: ${({ theme }) => theme.colors.secondary}; */
 
   position: relative;
   z-index: 2;

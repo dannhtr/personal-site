@@ -5,7 +5,7 @@ import { Row, Col } from 'react-grid-system';
 import { Container, Heading, Icon } from '..';
 
 const StyledPicture = styled(Container)`
-  background-color: ${({ theme }) => theme.colors.secondary};
+  /* background-color: ${({ theme }) => theme.colors.secondary}; */
 
   position: relative;
   z-index: 2;

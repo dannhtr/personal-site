@@ -7,7 +7,7 @@ import { Container, Heading, Text } from '..';
 const StyledHobbies = styled(Container)`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus}px;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  /* background-color: ${({ theme }) => theme.colors.secondary}; */
 
   position: relative;
   z-index: 2;
@@ -56,6 +56,11 @@ const Hobbies = () => {
             </Text>
           </Col>
           <Col md={4} style={{ marginBottom: 56 }}>
+            <Heading>
+              <span role="img" aria-label="Pile of books emoji">
+                📚
+              </span>
+            </Heading>
             <Heading
               as="h4"
               color="primary"
@@ -64,10 +69,7 @@ const Hobbies = () => {
               mb="medium"
               gradient
             >
-              Si no lo se, aprendo!{' '}
-              <span role="img" aria-label="Pile of books emoji">
-                📚
-              </span>
+              Si no lo se, aprendo!
             </Heading>
             <Text color="white">
               Por que esperar que alguien lo haga por ti cuando siempre se puede encontrar un buen
@@ -75,6 +77,11 @@ const Hobbies = () => {
             </Text>
           </Col>
           <Col md={4} style={{ marginBottom: 56 }}>
+            <Heading>
+              <span role="img" aria-label="Robotic strong arm emoji">
+                🦾
+              </span>
+            </Heading>
             <Heading
               as="h4"
               color="primary"
@@ -84,9 +91,6 @@ const Hobbies = () => {
               gradient
             >
               (Casi) todo se puede
-              <span role="img" aria-label="Robotic strong arm emoji">
-                🦾
-              </span>
             </Heading>
             <Text color="white">
               Si no es de una manera, puede ser de otra, la idea es siempre tratar de ofrecer la
@@ -94,6 +98,11 @@ const Hobbies = () => {
             </Text>
           </Col>
           <Col md={4} style={{ marginBottom: 56 }}>
+            <Heading>
+              <span role="img" aria-label="Gamer controller emoji">
+                🎮
+              </span>
+            </Heading>
             <Heading
               as="h4"
               color="primary"
@@ -103,9 +112,6 @@ const Hobbies = () => {
               gradient
             >
               Not a pro Gamer{' '}
-              <span role="img" aria-label="Gamer controller emoji">
-                🎮
-              </span>
             </Heading>
             <Text color="white">
               Me gustan los First Person Shooters (PUBG, Overwatch, CoD, Apex Legends) y perder
@@ -113,6 +119,11 @@ const Hobbies = () => {
             </Text>
           </Col>
           <Col md={4} style={{ marginBottom: 56 }}>
+            <Heading>
+              <span role="img" aria-label="Sun and sea emoji">
+                🌅
+              </span>
+            </Heading>
             <Heading
               as="h4"
               color="primary"
@@ -122,9 +133,6 @@ const Hobbies = () => {
               gradient
             >
               Mas casa y viajes{' '}
-              <span role="img" aria-label="Sun and sea emoji">
-                🌅
-              </span>
             </Heading>
             <Text color="white">
               Me gusta pasar tiempo en casa en familia, pero trato de compensar con viajes fuera de
@@ -132,6 +140,11 @@ const Hobbies = () => {
             </Text>
           </Col>
           <Col md={4} style={{ marginBottom: 56 }}>
+            <Heading>
+              <span role="img" aria-label="Fire emoji">
+                🔥
+              </span>
+            </Heading>
             <Heading
               as="h4"
               color="primary"
@@ -141,9 +154,6 @@ const Hobbies = () => {
               gradient
             >
               Wannabe de Artista{' '}
-              <span role="img" aria-label="Fire emoji">
-                🔥
-              </span>
             </Heading>
             <Text color="white">
               Con 2 marcas de poleras fallidas (Hater Clothing, Fire Riders Company) espero algun

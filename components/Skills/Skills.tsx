@@ -9,7 +9,7 @@ import { frontend, design } from '../../data/skills.json';
 const StyledSkills = styled(Container)`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus * 2}px;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  /* background-color: ${({ theme }) => theme.colors.secondary}; */
   position: relative;
   z-index: 2;
   border-radius: ${({ theme }) => theme.radii.large}px;
