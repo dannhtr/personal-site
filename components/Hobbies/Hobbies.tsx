@@ -4,7 +4,7 @@ import { Row, Col } from 'react-grid-system';
 
 import { Container, Heading, Text } from '..';
 
-const StyledHobbies = styled.section`
+const StyledHobbies = styled(Container)`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus}px;
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -14,7 +14,7 @@ const StyledHobbies = styled.section`
   border-radius: ${({ theme }) => theme.radii.large}px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    margin: ${({ theme }) => theme.space.large}px;
+    margin: ${({ theme }) => theme.space.large}px auto;
   }
 `;
 

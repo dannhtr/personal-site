@@ -4,7 +4,7 @@ import { Row, Col } from 'react-grid-system';
 
 import { Container, Heading, Icon } from '..';
 
-const StyledPicture = styled.section`
+const StyledPicture = styled(Container)`
   background-color: ${({ theme }) => theme.colors.secondary};
 
   position: relative;
@@ -12,7 +12,7 @@ const StyledPicture = styled.section`
   border-radius: ${({ theme }) => theme.radii.large}px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    margin: ${({ theme }) => theme.space.large}px;
+    margin: ${({ theme }) => theme.space.large}px auto;
   }
 
   figure {

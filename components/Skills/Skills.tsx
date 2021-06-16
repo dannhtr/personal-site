@@ -6,7 +6,7 @@ import { Container, Heading, Text, Fade } from '..';
 
 import { frontend, design } from '../../data/skills.json';
 
-const StyledSkills = styled.section`
+const StyledSkills = styled(Container)`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
   padding-bottom: ${({ theme }) => theme.space.colossus * 2}px;
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -15,7 +15,7 @@ const StyledSkills = styled.section`
   border-radius: ${({ theme }) => theme.radii.large}px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    margin: ${({ theme }) => theme.space.large}px;
+    margin: ${({ theme }) => theme.space.large}px auto;
   }
 `;
 

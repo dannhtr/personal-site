@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { Container } from '..';
 
-export const Section = styled.section`
+export const Section = styled(Container)`
   padding-top: ${({ theme }) => theme.space.colossus * 2}px;
-  padding-bottom: ${({ theme }) => theme.space.colossus * 4}px;
+  padding-bottom: ${({ theme }) => theme.space.colossus * 2}px;
   background-color: ${({ theme }) => theme.colors.secondary};
 
   position: relative;
@@ -10,7 +11,7 @@ export const Section = styled.section`
   border-radius: ${({ theme }) => theme.radii.large}px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    margin: ${({ theme }) => theme.space.large}px;
+    margin: ${({ theme }) => theme.space.large}px auto;
   }
 `;
 
