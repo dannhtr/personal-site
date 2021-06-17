@@ -1,14 +1,21 @@
 import Prismic from '@prismicio/client';
-
-import { Client } from '../config/prismic-config';
-
-import { Hello, Skills, WorkExperience, Picture, Hobbies, Noise, Footer } from '../components';
-
 import dynamic from 'next/dynamic';
 
-const BlackHole = dynamic(() => import('../components/BlackHole'), {
-  ssr: false,
-});
+import { Client } from '../config/prismic-config';
+import {
+  Hello,
+  Skills,
+  WorkExperience,
+  Picture,
+  Hobbies,
+  Noise,
+  Footer,
+  BlackHole,
+} from '../components';
+
+// const BlackHole = dynamic(() => import('../components/BlackHole'), {
+//   ssr: false,
+// });
 
 const HomePage = ({ jobs, intro, networks, picture, resume }) => {
   return (
@@ -42,7 +49,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      jobs: jobs ? jobs : [],
+      jobs: jobs,
       intro: intro,
       networks: networks,
       picture: picture,
