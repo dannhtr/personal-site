@@ -2,20 +2,11 @@ import Prismic from '@prismicio/client';
 import dynamic from 'next/dynamic';
 
 import { Client } from '../config/prismic-config';
-import {
-  Hello,
-  Skills,
-  WorkExperience,
-  Picture,
-  Hobbies,
-  Noise,
-  Footer,
-  BlackHole,
-} from '../components';
+import { Hello, Skills, WorkExperience, Picture, Hobbies, Noise, Footer } from '../components';
 
-// const BlackHole = dynamic(() => import('../components/BlackHole'), {
-//   ssr: false,
-// });
+const BlackHole = dynamic(() => import('../components/BlackHole'), {
+  ssr: false,
+});
 
 const HomePage = ({ jobs, intro, networks, picture, resume }) => {
   return (
